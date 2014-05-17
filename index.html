@@ -53,6 +53,35 @@
 <h6>
 <a name="%E4%BA%B2%E7%88%B1%E7%9A%84%E8%8A%82%E7%9B%AE%E5%BF%AB%E4%B9%90" class="anchor" href="#%E4%BA%B2%E7%88%B1%E7%9A%84%E8%8A%82%E7%9B%AE%E5%BF%AB%E4%B9%90"><span class="octicon octicon-link"></span></a>亲爱的节目快乐</h6>
 
+<div class="highlight highlight-c"><pre><span class="cp">#include&lt;love.h&gt;</span>
+<span class="cp">#include&lt;stdio.h&gt;</span>
+<span class="cp">#define TRUE 1</span>
+<span class="cp">#define FALSE 0</span>
+<span class="cp">#define forever 2</span>
+<span class="k">struct</span> <span class="n">ME</span>
+<span class="p">{</span>
+ <span class="kt">int</span> <span class="n">mylove</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="k">struct</span> <span class="n">U</span>
+<span class="p">{</span>
+ <span class="kt">int</span> <span class="n">yourlove</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="kt">void</span> <span class="nf">do_love</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">number</span><span class="o">==</span><span class="n">forever</span><span class="p">)</span>
+  <span class="n">do_love</span><span class="p">(</span><span class="n">forever</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">love</span><span class="p">{</span><span class="n">strcut</span> <span class="n">ME</span> <span class="n">me</span><span class="p">;</span><span class="k">struct</span> <span class="n">U</span> <span class="n">u</span><span class="p">;}</span> <span class="o">*</span><span class="n">LOVE</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">LOVE</span> <span class="n">all</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">(</span><span class="n">all</span><span class="o">-&gt;</span><span class="n">me</span><span class="p">.</span><span class="n">mylove</span><span class="o">==</span><span class="n">TRUE</span> <span class="o">&amp;&amp;</span> <span class="n">all</span><span class="o">-&gt;</span><span class="n">u</span><span class="p">.</span><span class="n">yourlove</span><span class="o">==</span><span class="n">TRUE</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">do_love</span><span class="p">(</span><span class="n">forever</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
 <h3>
 <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
