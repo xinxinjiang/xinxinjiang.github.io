@@ -75,6 +75,8 @@
 <span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
   <span class="n">LOVE</span> <span class="n">all</span><span class="p">;</span>
+  <span class="n">all</span><span class="o">=</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">love</span><span class="p">));</span>
+  <span class="n">setinfo</span><span class="p">(</span><span class="n">all</span><span class="p">);</span>
   <span class="k">while</span><span class="p">(</span><span class="n">all</span><span class="o">-&gt;</span><span class="n">me</span><span class="p">.</span><span class="n">mylove</span><span class="o">==</span><span class="n">TRUE</span> <span class="o">&amp;&amp;</span> <span class="n">all</span><span class="o">-&gt;</span><span class="n">u</span><span class="p">.</span><span class="n">yourlove</span><span class="o">==</span><span class="n">TRUE</span><span class="p">)</span>
   <span class="p">{</span>
     <span class="n">do_love</span><span class="p">(</span><span class="n">forever</span><span class="p">);</span>
